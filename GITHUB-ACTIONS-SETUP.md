@@ -37,7 +37,7 @@ This allows GitHub Actions to push to your newsletters repository.
 - **Value:** Paste the Personal Access Token from Step 2
 
 ### Secret 2: `ANTHROPIC_API_KEY`
-- **Value:** `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`
+- **Value:** Your Anthropic API key (starts with `sk-ant-`)
 
 ### Secret 3: `NTFY_TOPIC`
 - **Value:** `democracy-alex-2026`
