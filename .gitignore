@@ -1,0 +1,9 @@
+node_modules/
+config.json
+newsletters/
+newsletter.log
+*.log
+.DS_Store
+
+# Keep newsletter-summaries.json in git so GitHub Actions can update it
+!newsletter-summaries.json

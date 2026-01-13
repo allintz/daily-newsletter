@@ -1,0 +1,15 @@
+{
+  "name": "daily-newsletter",
+  "version": "1.0.0",
+  "description": "Daily push notification newsletter about voter subversion and democratic backsliding",
+  "main": "send-newsletter.js",
+  "scripts": {
+    "send": "node send-newsletter.js",
+    "test": "node send-newsletter.js --test",
+    "deploy": "node deploy-to-github.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.0",
+    "node-fetch": "^2.7.0"
+  }
+}

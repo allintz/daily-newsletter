@@ -1,0 +1,79 @@
+name: Daily Newsletter
+
+on:
+  schedule:
+    # Runs at 8:00 AM EST (13:00 UTC) every day
+    - cron: '0 13 * * *'
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  send-newsletter:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GH_PAT }}
+
+    - name: Checkout newsletters repository
+      uses: actions/checkout@v4
+      with:
+        repository: allintz/democracy-newsletter
+        path: newsletters
+        token: ${{ secrets.GH_PAT }}
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Create config.json from secrets
+      run: |
+        cat > config.json << 'EOF'
+        {
+          "send_time": "08:00",
+          "timezone": "America/New_York",
+          "topics": [
+            "Understanding voter subversion in the US",
+            "Understanding details of attempts to subvert election in 2020 & 2022 by Republicans + older cases by either party",
+            "Summaries of political science papers which might be relevant for preventing democratic backsliding"
+          ],
+          "newsletter_style": "EA Forum style - fun to read with good reasoning transparency",
+          "target_read_time": "5 minutes",
+          "ntfy": {
+            "topic": "${{ secrets.NTFY_TOPIC }}",
+            "server": "https://ntfy.sh",
+            "priority": "default"
+          },
+          "anthropic_api_key": "${{ secrets.ANTHROPIC_API_KEY }}",
+          "newsletter_archive_path": "./newsletters",
+          "hosting": {
+            "method": "github-pages",
+            "base_url": "https://allintz.github.io/democracy-newsletter"
+          }
+        }
+        EOF
+
+    - name: Generate and send newsletter
+      run: node send-newsletter.js
+
+    - name: Commit and push to newsletters repository
+      run: |
+        cd newsletters
+        git config user.name "GitHub Actions Bot"
+        git config user.email "actions@github.com"
+        git add .
+        git diff --staged --quiet || git commit -m "Daily newsletter $(date +%Y-%m-%d)"
+        git push
+
+    - name: Update newsletter summaries
+      run: |
+        git config user.name "GitHub Actions Bot"
+        git config user.email "actions@github.com"
+        git add newsletter-summaries.json
+        git diff --staged --quiet || git commit -m "Update newsletter summaries $(date +%Y-%m-%d)"
+        git push

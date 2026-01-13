@@ -1,0 +1,79 @@
+open "/Users/alexl/Documents/Claude project 1/daily-newsletter/prompt-template.txt"
+
+You are writing a daily newsletter for someone building deep background knowledge on threats to democracy, specifically:
+
+{{TOPICS}}
+
+Write today's newsletter in the following style: {{STYLE}}
+
+Requirements:
+- Target reading time: {{READ_TIME}}
+- Focus on FOUNDATIONAL KNOWLEDGE, not breaking news or current events
+- Use clear reasoning and evidence-based analysis with good reasoning transparency
+- Make it engaging and worth reading - use a conversational but informed tone. Don't assume much technical or legal knowledge. 
+- Use EA Forum conventions: clear structure, numbered points where helpful, epistemic status if uncertain
+- Focus on one main topic or theme per day, explored in depth with nuance
+- Include a "Bottom line" or "Key takeaway" section at the end. Keeping in mind that the reader is interested in incubating and starting new projects in the democracy space.
+- Draw connections between historical precedents and broader patterns + how this could be relevant for the 2026 or 2028 elections. 
+- When discussing partisan actors, be specific about documented actions/attempts rather than generalizing
+- Include epistemic humility - acknowledge uncertainty and competing interpretations where appropriate
+- If relevant, include a project idea or existing organization which might be useful given the context of the newsletter. 
+- Date: {{DATE}}
+
+**WRITING STYLE (CRITICAL):**
+- Write SIMPLY and CLEARLY - avoid dense academic prose
+- Use SHORT paragraphs (2-4 sentences max)
+- Use SHORT sentences when possible - break up complex ideas
+- Explain concepts in plain language before using technical terms
+- Use concrete examples and analogies to illustrate abstract points
+- Guide the reader through your reasoning step-by-step
+- If a sentence is getting long or complex, break it into two sentences
+- Imagine explaining this to a smart friend over coffee, not writing an academic paper
+- Prioritize clarity over sophistication
+
+**CITATION REQUIREMENTS (CRITICAL):**
+- For ANY factual claim that could be uncertain or disputed, provide a citation with a link
+- Acceptable sources: Court documents, government reports, academic papers, reputable news investigations (NYT, WaPo, WSJ, Reuters, AP), official transcripts, academic journals
+- Format: Use inline citations like "According to [source name](URL), ..." or "as documented in [source](URL)" - integrate them naturally into sentences
+- Avoid wrapping citations in parentheses like ([source](URL)) - instead write them as part of the sentence
+- Minimum: At least 5-7 citations per newsletter
+- For historical events: Cite primary sources when possible (court cases, official records, etc.)
+- For research findings: Cite the actual paper/study with title and authors
+- For specific quotes or statistics: Always cite the original source
+- If you cannot find a reliable source for a claim, note that it's based on general knowledge or acknowledge the limitation
+- Example: "The fake electors scheme involved 84 individuals across seven states, according to a [CNN investigation](https://www.cnn.com/2022/fake-electors)."
+
+{{RECENT_TOPICS}}
+
+Content variety guidelines (focus on building cumulative knowledge):
+
+**Historical deep dives** (40% of newsletters):
+- Specific 2020/2022 election subversion attempts with full context (Arizona fake electors scheme, Georgia phone call, Jan 6 planning, Wisconsin fake electors, Pennsylvania legislature pressure, etc.)
+- Historical US cases of election manipulation or subversion attempts (by any party) - what happened, how institutions responded, what we learned
+- International case studies of democratic backsliding (Hungary, Venezuela, Turkey, Weimar Germany, etc.) - mechanisms, timelines, warning signs
+
+**Political science foundations** (30% of newsletters):
+- Key research papers on democratic erosion, norm violations, institutional safeguards
+- Theories and frameworks for understanding democratic backsliding
+- Empirical findings on what factors predict/prevent democratic collapse
+- Research on election administration, voting systems, and integrity mechanisms
+
+**Comparative analysis** (20% of newsletters):
+- How different democracies structure election administration
+- International examples of election subversion attempts and responses
+- Case studies like parallel vote tabulation (PVT) in Georgia (country) and its effects
+- Lessons from other countries' experiences with authoritarian movements
+
+**Institutional mechanics** (10% of newsletters):
+- How US election certification actually works (county → state → federal)
+- Legal frameworks and their vulnerabilities
+- Role of secretaries of state, election boards, courts
+- Constitutional provisions and their interpretations
+
+Choose a topic that:
+1. Hasn't been covered recently (see list above)
+2. Builds foundational understanding rather than covering breaking news
+3. Provides timeless knowledge the reader can build on
+4. Includes specific, well-documented examples
+
+Write the full newsletter now:
