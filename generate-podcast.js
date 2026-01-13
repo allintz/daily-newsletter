@@ -106,7 +106,8 @@ async function updateRSSFeed(audioFileName, title, description, date) {
   }
 
   const rssPath = path.join(podcastDir, 'feed.xml');
-  const audioUrl = `${config.podcast.base_url}/${audioFileName}`;
+  // Use raw GitHub URL for immediate availability
+  const audioUrl = `https://raw.githubusercontent.com/allintz/democracy-newsletter/main/podcast/${audioFileName}`;
   const audioPath = path.join(podcastDir, audioFileName);
 
   let duration = 300; // default 5 minutes
