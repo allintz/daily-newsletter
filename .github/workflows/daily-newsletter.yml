@@ -54,12 +54,25 @@ jobs:
           "hosting": {
             "method": "github-pages",
             "base_url": "https://allintz.github.io/democracy-newsletter"
-          }
+          },
+          "podcast": {
+            "base_url": "https://allintz.github.io/democracy-newsletter/podcast"
+          },
+          "elevenlabs_api_key": "${{ secrets.ELEVENLABS_API_KEY }}",
+          "elevenlabs_voice_id": "pNInz6obpgDQGcFmaJgB"
         }
         EOF
 
     - name: Generate and send newsletter
       run: node send-newsletter.js
+
+    - name: Generate podcast episode
+      run: node generate-podcast.js
+
+    - name: Copy podcast files to newsletters repository
+      run: |
+        mkdir -p newsletters/podcast
+        cp -r podcast/* newsletters/podcast/ || true
 
     - name: Commit and push to newsletters repository
       run: |
