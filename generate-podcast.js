@@ -22,11 +22,12 @@ Take this newsletter and rewrite it to be optimal for listening:
 5. Preserve all the key information and nuance
 6. DO NOT add an introduction like "Welcome to..." or "This is..." - just start with the content
 7. DO NOT add a conclusion or sign-off - just end naturally
+8. IMPORTANT: Keep it under 9,000 characters. Condense if needed while preserving key insights.
 
 Original newsletter:
 ${content}
 
-Provide the audio-optimized version:`;
+Provide the audio-optimized version (under 9,000 characters):`;
 
   const message = await anthropic.messages.create({
     model: 'claude-sonnet-4-5-20250929',
