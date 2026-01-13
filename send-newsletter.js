@@ -418,6 +418,7 @@ async function sendPushNotification(title, message, url) {
         'Title': title,
         'Priority': config.ntfy.priority || 'default',
         'Click': url,
+        'Actions': `view, Open Newsletter, ${url}, clear=true`,
         'Tags': 'books,newspaper'
       },
       body: message
