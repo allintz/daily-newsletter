@@ -68,6 +68,7 @@ jobs:
 
     - name: Generate podcast episode
       run: node generate-podcast.js
+      continue-on-error: true
 
     - name: Copy podcast files to newsletters repository
       run: |
