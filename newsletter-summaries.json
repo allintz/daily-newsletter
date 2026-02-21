@@ -73,150 +73,410 @@
   },
   "2026-01-16": {
     "summary": "The 2020 Michigan plot to kidnap Governor Whitmer illustrates how organized violence and threats against election officials serve as a complementary tactic to legal election subversion schemes by making officials fear for their safety when making decisions about certifying results. While procedural reforms like the Electoral Count Reform Act are important, they assume good-faith implementation, which can be undermined when election workers face credible threats of violence—a growing and under-resourced problem that needs attention through security support and protection programs for local officials.",
-    "topics": []
+    "topics": [
+      "Michigan Governor Whitmer kidnapping plot (2020)",
+      "organized violence against election officials",
+      "election worker physical safety threats",
+      "Electoral Count Reform Act - good faith assumption",
+      "election official security programs"
+    ]
   },
   "2026-01-17": {
     "summary": "This newsletter examines the specific tactics Viktor Orbán used to consolidate power in Hungary after 2010, including rewriting the constitution, capturing independent oversight institutions, gerrymandering electoral districts, and creating economically dependent oligarchs—all while maintaining the appearance of democracy. The key lesson is that democratic backsliding happens through accumulated legal institutional changes rather than dramatic coups, making prevention crucial since reversing institutional capture is extremely difficult once achieved.",
-    "topics": []
+    "topics": [
+      "Viktor Orbán - Hungary power consolidation",
+      "Hungary democratic backsliding (post-2010)",
+      "constitutional rewriting as backsliding tool",
+      "institutional capture of oversight bodies",
+      "gerrymandering electoral districts - Hungary",
+      "oligarch creation and economic dependence",
+      "incremental legal institutional changes vs coups",
+      "difficulty of reversing institutional capture"
+    ]
   },
   "2026-01-18": {
     "summary": "This newsletter examines the \"contingent election\" mechanism, where the House of Representatives selects the president (with each state getting one vote) if no candidate reaches 270 electoral votes, and how this constitutional provision has repeatedly been exploited or nearly exploited throughout U.S. history—from the 1800 Jefferson-Burr crisis to George Wallace's 1968 strategy to the 2020 fake electors scheme. The key takeaway is that this mechanism creates a dangerous incentive for losing parties to prevent any candidate from reaching 270 electoral votes through state-level obstruction, especially since Republicans currently control more state delegations than Democrats, making it a potential vector for election subversion in close future",
-    "topics": []
+    "topics": [
+      "contingent election mechanism (12th Amendment)",
+      "House of Representatives presidential selection",
+      "one-state-one-vote rule",
+      "270 electoral vote threshold",
+      "1800 Jefferson-Burr crisis",
+      "George Wallace 1968 third-party strategy",
+      "state delegation control and partisan advantage",
+      "preventing 270 through state-level obstruction"
+    ]
   },
   "2026-01-19": {
     "summary": "The Brooks Brothers Riot refers to when Republican operatives, many later identified as paid GOP staffers, successfully pressured Miami-Dade election officials to permanently halt their legal ballot recount during the contested 2000 presidential election through physical intimidation and protests. This event matters because it demonstrated that organized pressure on vulnerable local election officials during vote counting can successfully alter democratic processes, creating a playbook that remains relevant as election officials continue to face threats without adequate institutional protection or accountability measures for intimidation tactics.",
-    "topics": []
+    "topics": [
+      "Brooks Brothers riot (2000) - detailed profile",
+      "Miami-Dade recount halt",
+      "GOP operative intimidation of election officials",
+      "paid political staffers as protesters",
+      "2000 presidential election recount",
+      "intimidation playbook for election subversion",
+      "lack of accountability for election intimidation"
+    ]
   },
   "2026-01-20": {
     "summary": "The Independent State Legislature (ISL) theory, which claims state legislatures have unchecked power over federal elections without oversight from state courts, governors, or even state constitutions, nearly became constitutional law in 2023 before the Supreme Court rejected it 6-3 in Moore v. Harper. Despite this defeat, the theory remains a threat because three justices dissented, the majority opinion left vague loopholes about \"ordinary bounds of judicial review,\" and the underlying strategy of exploiting constitutional ambiguities through legal warfare continues to evolve.",
-    "topics": []
+    "topics": [
+      "ISL theory - ongoing threat after Moore v. Harper",
+      "three dissenting justices (Thomas, Alito, Gorsuch)",
+      "ordinary bounds of judicial review standard",
+      "exploiting constitutional ambiguities through legal warfare"
+    ]
   },
   "2026-01-21": {
     "summary": "This newsletter examines how the tight 35-day timeline between Election Day and the Electoral College meeting creates vulnerabilities for election subversion, focusing on how Trump's team in 2020 attempted to exploit certification deadlines through lawsuits and pressure campaigns to create enough chaos that states would miss key dates. While the 2022 Electoral Count Reform Act addressed some weaknesses by removing the \"safe harbor\" deadline and clarifying governors' certification authority, significant gaps remain—particularly around county-level coordination and state legislatures potentially ignoring their own election laws—that could still be exploited in extremely close future elections.",
-    "topics": []
+    "topics": [
+      "35-day Election Day to Electoral College timeline",
+      "certification deadline exploitation",
+      "2020 Trump team lawsuit chaos strategy",
+      "safe harbor deadline removal (ECRA)",
+      "governors' certification authority",
+      "county-level coordination gaps",
+      "state legislatures ignoring own election laws"
+    ]
   },
   "2026-01-22": {
     "summary": "This newsletter examines how county-level election certification has emerged as a critical vulnerability in U.S. democracy, as demonstrated by incidents in 2020 and 2022 where local officials in counties like Wayne County, Michigan and Cochise County, Arizona refused or delayed certifying routine election results. While none of these attempts succeeded in overturning elections, the author warns that this scalable chokepoint—involving thousands of low-profile local officials who can create chaos by blocking certification in just a few strategic counties—could be exploited more systematically in future elections unless states implement stronger legal frameworks and support systems.",
-    "topics": []
+    "topics": [
+      "county-level certification refusal as chokepoint",
+      "Wayne County, Michigan certification refusal (2020)",
+      "Cochise County, Arizona certification delay (2022)",
+      "scalable certification obstruction strategy",
+      "low-profile local officials as vulnerability",
+      "strategic county targeting for maximum disruption"
+    ]
   },
   "2026-01-23": {
     "summary": "The 2021 Coffee County, Georgia incident revealed that sympathetic local election officials can grant outsiders complete physical access to voting systems—including software used across multiple states—and such breaches may go undetected for over a year because security measures focus on external threats rather than insider access. This scalable vulnerability is particularly dangerous because thousands of small U.S. counties lack the resources for robust oversight, making it possible for bad actors to compromise strategic jurisdictions without needing to breach well-protected large counties.",
-    "topics": []
+    "topics": [
+      "Coffee County, Georgia voting system breach (2021)",
+      "insider access to voting systems",
+      "sympathetic local officials granting system access",
+      "voting software used across multiple states",
+      "undetected breaches - insider threat model",
+      "small county oversight resource gaps",
+      "physical security of voting infrastructure"
+    ]
   },
   "2026-01-24": {
     "summary": "The newsletter examines how election subversion can succeed not by changing votes, but by creating procedural chaos during close recounts that justifies court or legislative intervention, using Florida's 2000 recount as the primary example. The key takeaway is that this \"chaos-then-intervention\" tactic remains a viable threat in modern elections, exploitable through aggressive legal challenges to ambiguous procedures, tight certification deadlines, and inconsistent standards across jurisdictions.",
-    "topics": []
+    "topics": [
+      "chaos-then-intervention subversion tactic",
+      "procedural chaos during recounts",
+      "Florida 2000 recount as chaos model",
+      "court intervention in election disputes",
+      "legislative intervention in election disputes",
+      "inconsistent standards across jurisdictions",
+      "aggressive legal challenges to recount procedures"
+    ]
   },
   "2026-01-25": {
     "summary": "This newsletter examines how systematic threats and intimidation against election officials—exemplified by the 2020 Michigan kidnapping plot targeting Governor Whitmer—are creating a dangerous mechanism for election subversion by driving experienced administrators to quit and enabling their replacement with partisan activists. The key takeaway is that protecting democracy requires building support infrastructure (legal defense, security resources, professional networks) for local election workers, since this decentralized threat is harder to counter than coordinated legal schemes and could significantly impact close races in 2026 and 2028.",
-    "topics": []
+    "topics": [
+      "systematic election official intimidation",
+      "experienced administrator resignations due to threats",
+      "replacement of officials with partisan activists",
+      "election worker support infrastructure needs",
+      "legal defense for election workers",
+      "decentralized intimidation threat model"
+    ]
   },
   "2026-01-26": {
     "summary": "This newsletter explains how aspiring autocrats often strategically weaken government institutions rather than strengthen them, because weak, politicized institutions provide plausible deniability, enable selective enforcement, and create useful chaos while strong professional institutions can say \"no\" and challenge power grabs. The key concern for US democracy is that America's election system is already highly fragmented across 10,000+ jurisdictions with varying capacity, creating vulnerabilities similar to what autocrats deliberately construct—making it difficult to distinguish between genuine administrative problems and intentional subversion.",
-    "topics": []
+    "topics": [
+      "autocratic institutional weakening strategy",
+      "politicized institutions and plausible deniability",
+      "selective enforcement as power tool",
+      "institutional chaos as authoritarian feature",
+      "US election system fragmentation (10,000+ jurisdictions)",
+      "distinguishing administrative problems from intentional subversion"
+    ]
   },
   "2026-01-27": {
     "summary": "This newsletter examines how state legislatures use their legitimate authority over elections to pass laws that weaken election safeguards—such as shifting power from independent officials to legislature-controlled bodies or creating new grounds for intervention in certification—wrapping election subversion in the language of legislative authority. Recent examples include Alabama's defiance of a Supreme Court redistricting order and Georgia's SB 202, which removed the Secretary of State from the election board and enabled state takeover of county election administration, demonstrating a pattern that's difficult to combat because it exploits formal legal processes rather than relying on isolated bad actors.",
-    "topics": []
+    "topics": [
+      "state legislative authority over elections - weaponization",
+      "shifting power from independent officials to legislature-controlled bodies",
+      "Alabama defiance of Supreme Court redistricting order",
+      "Georgia SB 202",
+      "removal of Secretary of State from Georgia election board",
+      "state takeover of county election administration",
+      "election subversion through formal legal processes"
+    ]
   },
   "2026-01-28": {
     "summary": "This newsletter examines how the \"count all legal votes\" rhetoric can be weaponized to challenge election results by exploiting the inevitable procedural judgment calls and minor administrative irregularities that occur in every election, potentially invalidating thousands of legitimate ballots on technical grounds rather than proving actual fraud. The key danger is that this tactic operates within legal channels by transforming routine election administration complexity into grounds for contesting close elections, making it harder to defend against than schemes requiring institutional capture or outright rule-breaking.",
-    "topics": []
+    "topics": [
+      "count all legal votes rhetoric - weaponization",
+      "procedural judgment calls in election administration",
+      "minor administrative irregularities as attack surface",
+      "ballot invalidation on technical grounds",
+      "contesting elections through legal channels",
+      "election administration complexity exploitation"
+    ]
   },
   "2026-01-29": {
     "summary": "The Independent State Legislature (ISL) theory argued that state legislatures have nearly unchecked power over federal elections, free from constraints by state constitutions, courts, or governors—a theory that came dangerously close to Supreme Court acceptance in 2022 when four justices signaled support. While the Court rejected the strongest version in Moore v. Harper (2023), it left a vague \"too far\" standard that allows federal courts to override state court election rulings, creating an exploitable loophole that could cause chaos in close future elections.",
-    "topics": []
+    "topics": [
+      "ISL theory - four justice support in 2022",
+      "too far standard - vague federal court override",
+      "federal courts overriding state court election rulings"
+    ]
   },
   "2026-01-30": {
     "summary": "In 2020, American democracy relied heavily on individual election officials like Brad Raffensperger and Clint Hickman who refused intense pressure from their own party to delay or overturn certification results, rather than on institutional safeguards that could have compelled them to act properly. This dependence on personal integrity rather than systematic protections is a critical vulnerability, requiring reforms like clearer laws with enforcement mechanisms, faster judicial review processes, and support networks for officials facing pressure to subvert elections.",
-    "topics": []
+    "topics": [
+      "Brad Raffensperger - resisting 2020 pressure",
+      "Clint Hickman - Maricopa County certification",
+      "dependence on individual official integrity",
+      "institutional safeguards vs personal courage",
+      "enforcement mechanisms for election laws",
+      "faster judicial review for election disputes",
+      "support networks for pressured officials"
+    ]
   },
   "2026-01-31": {
     "summary": "The \"safe harbor\" deadline, which requires states to resolve election disputes three days before the Electoral College meets, creates a dangerous vulnerability where bad actors can deliberately delay certification to create confusion and give Congress power to reject electoral votes. While the 2022 Electoral Count Reform Act made improvements, the absurdly compressed five-week timeline between Election Day and the deadline remains exploitable, as evidenced by Trump advisors' 2020 strategy to deliberately push states past the deadline—a playbook that is now public and could be used in future close elections.",
-    "topics": []
+    "topics": [
+      "safe harbor deadline vulnerability",
+      "deliberate certification delay strategy",
+      "Congressional power to reject electoral votes",
+      "five-week Election Day to deadline timeline",
+      "Trump advisors 2020 deadline exploitation strategy",
+      "Electoral Count Reform Act - remaining gaps"
+    ]
   },
   "2026-02-01": {
     "summary": "This newsletter examines how mass voter challenges—using legitimate procedural tools to question thousands of voter registrations or ballots at once—can effectively disenfranchise eligible voters, particularly in minority communities, by overwhelming election officials and intimidating targeted voters even when most challenges ultimately fail. The key takeaway is that this \"retail-level\" election subversion tactic is harder to detect and counter than dramatic certification refusals, and while it was mostly blocked in 2024, the infrastructure now exists for more sophisticated attempts in future close elections unless states implement stronger protections like evidence requirements and penalties for frivolous challenges.",
-    "topics": []
+    "topics": [
+      "mass voter challenges",
+      "voter registration challenges as disenfranchisement tool",
+      "overwhelming election officials with challenge volume",
+      "voter intimidation through challenge process",
+      "minority community targeting through challenges",
+      "2024 voter challenge blocking efforts",
+      "evidence requirements for voter challenges",
+      "penalties for frivolous voter challenges"
+    ]
   },
   "2026-02-02": {
     "summary": "This newsletter examines how small county canvassing boards (often just 2-4 local officials) represent a critical vulnerability in U.S. elections, as they can refuse to certify vote results before they become official, potentially blocking thousands of votes. Despite recent real-world examples in Michigan, Arizona, and New Mexico where officials temporarily refused certification with minimal consequences, existing legal protections remain inadequate because most election laws assume good faith and lack clear enforcement mechanisms or swift replacement procedures.",
-    "topics": []
+    "topics": [
+      "county canvassing boards (2-4 officials)",
+      "certification refusal at county level",
+      "Michigan certification refusal incidents",
+      "Arizona certification refusal incidents",
+      "New Mexico certification refusal incidents",
+      "election laws assuming good faith",
+      "lack of swift replacement procedures for refusing officials"
+    ]
   },
   "2026-02-03": {
     "summary": "This newsletter examines how voter roll purges—the administrative process of removing ineligible voters from registration lists—have evolved from routine \"list maintenance\" into an effective voter suppression tool, often using unreliable data matching that disproportionately flags minority voters for removal. The key vulnerability is that these purges operate in a legitimacy gray zone between necessary administration and targeted disenfranchisement, with harm invisible until Election Day when purged voters discover they can't cast regular ballots, making them especially effective in close elections.",
-    "topics": []
+    "topics": [
+      "voter roll purges as suppression tool",
+      "list maintenance vs targeted disenfranchisement",
+      "unreliable data matching in voter rolls",
+      "disproportionate minority voter flagging",
+      "invisible harm until Election Day",
+      "purged voter discovery at polls"
+    ]
   },
   "2026-02-04": {
     "summary": "The 2020 fake electors scheme involved 84 Trump supporters in seven Biden-won states who signed fraudulent documents claiming to be legitimate Electoral College representatives, intending to create confusion that could allow Vice President Pence to reject Biden's victory or throw the count into chaos. The plot failed primarily due to contingent factors—governors refusing to certify fake slates, Pence declining to exploit the ambiguity, and flawed paperwork—rather than structural safeguards, meaning the documented playbook could be deployed more effectively in a future close election unless the underlying vulnerabilities in the electoral certification process are addressed.",
-    "topics": []
+    "topics": [
+      "fake electors scheme - 84 participants in 7 states",
+      "governors refusing to certify fake slates",
+      "Pence declining to exploit ambiguity",
+      "flawed paperwork in fake elector certificates",
+      "contingent factors vs structural safeguards",
+      "documented playbook for future exploitation"
+    ]
   },
   "2026-02-05": {
     "summary": "The 78-day period between U.S. Election Day and Inauguration Day creates a dangerous vulnerability where defeated officials retain power over certifying election results that ended their tenure, giving them maximum incentive and opportunity to disrupt the democratic process. While the 2022 Electoral Count Reform Act addressed some issues, the 2020 election revealed this \"lame duck\" playbook with minimal consequences for those who attempted subversion, making future exploitation likely unless states shorten certification timelines and strengthen enforcement mechanisms before 2028.",
-    "topics": []
+    "topics": [
+      "78-day lame duck vulnerability period",
+      "defeated officials retaining certification power",
+      "lame duck disruption incentives",
+      "minimal consequences for 2020 subversion attempts",
+      "shortening certification timelines",
+      "enforcement mechanisms for lame duck period"
+    ]
   },
   "2026-02-06": {
     "summary": "The Electoral College's winner-take-all system creates concentrated \"attack surfaces\" where flipping a few thousand votes in handful of swing states can determine the presidency, making election subversion efforts far more feasible than under a national popular vote system. This structure means that tactics like voter roll purges, certification refusals, and fake electors have amplified impact when targeted at specific counties in swing states, requiring democracy defenders to focus resources on these predictable high-value targets ahead of 2028.",
-    "topics": []
+    "topics": [
+      "Electoral College winner-take-all attack surface",
+      "swing state concentration of subversion impact",
+      "national popular vote vs Electoral College security",
+      "targeted county-level subversion in swing states",
+      "predictable high-value targets for democracy defense"
+    ]
   },
   "2026-02-07": {
     "summary": "Experienced election officials are resigning at alarming rates (20% turnover between 2020-2022) due to harassment, death threats, and dangerous working conditions, while some positions are being filled by individuals who explicitly question election legitimacy. This creates a national security vulnerability because the loss of institutional knowledge, combined with inexperienced or ideologically motivated replacements in the decentralized U.S. election system, increases the likelihood of errors and disruptions that could undermine election integrity and public confidence by 2028.",
-    "topics": []
+    "topics": [
+      "election official resignation rates (20% turnover 2020-2022)",
+      "harassment and death threats against election workers",
+      "election denier replacements for experienced officials",
+      "institutional knowledge loss in election administration",
+      "ideologically motivated election officials"
+    ]
   },
   "2026-02-08": {
     "summary": "The \"Independent State Legislature\" theory claims that state legislatures have nearly unchecked power over federal elections, potentially allowing them to override election results, ignore governors and state courts, and change rules unilaterally—which is why Trump's 2020 pressure campaign targeted state legislatures rather than governors or election officials. While the Supreme Court rejected the strongest version of this theory in Moore v. Harper (2023), it left enough legal ambiguity that state legislatures could still use it as justification to intervene in close elections, making the composition of swing state legislatures critically important for election security.",
-    "topics": []
+    "topics": [
+      "ISL theory - Trump pressure campaign targeting legislatures",
+      "swing state legislature composition and election security",
+      "state legislature intervention in close elections"
+    ]
   },
   "2026-02-09": {
     "summary": "This newsletter examines how democratic transitions fundamentally depend on an informal norm—the \"consent of the loser\"—where defeated candidates publicly concede and facilitate power transfers, a practice that has no legal enforcement but held in the U.S. for over a century with only one exception (1876). The key concern is that once this norm erodes, it creates a self-reinforcing cycle where future candidates have incentives to contest results preemptively, turning close elections into potential legitimacy crises that are extremely difficult to resolve.",
-    "topics": []
+    "topics": [
+      "consent of the loser norm",
+      "concession as democratic norm",
+      "1876 election - exception to concession norm",
+      "norm erosion self-reinforcing cycle",
+      "preemptive result contesting incentives",
+      "legitimacy crises in close elections"
+    ]
   },
   "2026-02-10": {
     "summary": "This newsletter examines how gerrymandered state legislatures can legally change election rules mid-cycle to entrench minority party power, using Wisconsin's 2011-2024 experience as a case study where Republicans held 63% of legislative seats despite winning only 45-47% of votes. The key takeaway is that 2026 state legislative races are critical for protecting 2028 election integrity, as winning these races—and state supreme court seats—can prevent unilateral rule changes and break gerrymandered supermajorities before the presidential election.",
-    "topics": []
+    "topics": [
+      "gerrymandered state legislatures changing election rules",
+      "Wisconsin gerrymandering (2011-2024)",
+      "minority party power entrenchment through gerrymandering",
+      "63% seats from 45-47% votes - Wisconsin",
+      "2026 state legislative races - election integrity impact",
+      "state supreme court seats and gerrymandering",
+      "breaking gerrymandered supermajorities"
+    ]
   },
   "2026-02-11": {
     "summary": "This newsletter explains how voter roll purges work—the legitimate process of removing ineligible voters from registration lists—and identifies three key vulnerabilities: bad data matching that can wrongly flag eligible voters, timing loopholes that allow purges just outside the 90-day pre-election safe harbor, and selective enforcement that disproportionately affects certain demographic groups. The main takeaway is that voter roll purges represent a \"slow-motion\" form of election manipulation that is harder to detect than dramatic certification refusals, with the critical window to prevent purge-based problems in 2028 being November 2027 (before the 90-day safe harbor) and the 2026 state elections for",
-    "topics": []
+    "topics": [
+      "voter roll purge mechanics - detailed explanation",
+      "bad data matching in voter rolls",
+      "90-day pre-election safe harbor for purges",
+      "timing loopholes around safe harbor",
+      "selective enforcement affecting demographic groups",
+      "slow-motion election manipulation",
+      "November 2027 critical window for 2028 purge prevention"
+    ]
   },
   "2026-02-12": {
     "summary": "The 2020 \"fake electors\" scheme involved 84 Republicans across seven swing states signing fraudulent certificates claiming to be legitimate electors, which was part of a coordinated three-part plan to create confusion about election results and exploit ambiguities when Congress counted electoral votes on January 6. The scheme failed because state officials like Georgia's Brad Raffensperger refused to provide official cover for the fake slates, but it revealed dangerous vulnerabilities in the election certification process that remain partially unresolved despite the 2022 Electoral Count Reform Act.",
-    "topics": []
+    "topics": [
+      "fake electors - coordinated three-part plan",
+      "Brad Raffensperger refusing official cover for fake slates",
+      "Congressional electoral vote counting ambiguities",
+      "partially unresolved certification vulnerabilities"
+    ]
   },
   "2026-02-13": {
     "summary": "This newsletter argues that while individual Republican officials like Brad Raffensperger and Mike Pence saved democracy in 2020 by resisting pressure to overturn election results, relying on such individual courage is a dangerously fragile strategy with poor statistical odds of repeated success. The key takeaway is that democracy needs systemic protections—like automatic audits, transparent vote verification processes, and distributed power structures—that work regardless of whether officials in key positions act heroically, with the critical window for implementing these safeguards being now through late 2027 before the 2028 election.",
-    "topics": []
+    "topics": [
+      "individual courage vs systemic protection",
+      "Raffensperger and Pence as democracy saviors in 2020",
+      "statistical odds of repeated individual resistance",
+      "automatic audits as systemic safeguard",
+      "transparent vote verification processes",
+      "distributed power structures",
+      "late 2027 implementation deadline for 2028 safeguards"
+    ]
   },
   "2026-02-14": {
     "summary": "This newsletter examines how Georgia's specific election procedural rules—including distributed county-level certification, mandatory hand recounts, independent Secretary of State authority, and public result verification—made it structurally difficult for officials to manipulate the 2020 election results, even under pressure from Trump. The key takeaway is that well-designed procedural systems with distributed authority, paper trails, and transparency can protect election integrity automatically, without relying on individual officials' courage, making state-level election procedure reform critical for 2026 and 2028.",
-    "topics": []
+    "topics": [
+      "Georgia election procedural rules as model",
+      "distributed county-level certification",
+      "mandatory hand recounts - Georgia",
+      "independent Secretary of State authority - Georgia",
+      "public result verification",
+      "paper trails and transparency in elections",
+      "state-level election procedure reform"
+    ]
   },
   "2026-02-15": {
     "summary": "The RNC Consent Decree (1982-2018) legally banned the Republican National Committee from \"ballot security\" activities like voter intimidation and challenges targeting minority voters, effectively constraining such operations by cutting off national party resources and coordination to state-level efforts. After the decree expired in 2018, the Trump campaign and RNC launched extensive poll-watching and voter-challenge programs in 2020, illustrating how democracies must proactively replace expiring legal protections before they lapse rather than reacting afterward.",
-    "topics": []
+    "topics": [
+      "RNC Consent Decree (1982-2018)",
+      "ballot security activities ban",
+      "voter intimidation and challenges targeting minority voters",
+      "2018 consent decree expiration",
+      "Trump campaign poll-watching programs (2020)",
+      "RNC voter-challenge programs (2020)",
+      "proactively replacing expiring legal protections"
+    ]
   },
   "2026-02-16": {
     "summary": "The Brooks Brothers Riot of November 22, 2000, involved approximately 100 Republican operatives who physically disrupted Miami-Dade County's presidential recount, leading the canvassing board to abandon the recount entirely in a county with 654,000 votes—potentially changing the outcome of the presidential election in Florida, which Bush won by just 537 votes. The incident demonstrates how small, coordinated groups can exploit procedural vulnerabilities (decentralized decision-making, tight deadlines, and lack of security protocols) to stop election processes, a playbook that remains relevant for future elections unless structural reforms are implemented.",
-    "topics": []
+    "topics": [
+      "Brooks Brothers riot - 100 operatives disrupting recount",
+      "Miami-Dade canvassing board abandoning recount",
+      "654,000 votes in Miami-Dade County",
+      "Bush 537-vote margin in Florida",
+      "small coordinated groups exploiting procedural vulnerabilities",
+      "decentralized decision-making vulnerability",
+      "lack of security protocols at recount sites"
+    ]
   },
   "2026-02-17": {
     "summary": "The \"independent state legislature theory,\" rejected by the Supreme Court in *Moore v. Harper* (2023), would have prevented state courts, governors, and citizen initiatives from checking state legislatures' power over federal election rules—a theory central to 2020 election subversion attempts. While the Court's rejection was a victory for election integrity, the decision left vague boundaries that legislatures may test, making state supreme court races in 2026 critically important for protecting democratic safeguards ahead of the 2028 presidential election.",
-    "topics": []
+    "topics": [
+      "ISL theory - citizen initiatives affected",
+      "2026 state supreme court races - critical importance",
+      "vague boundaries after Moore v. Harper"
+    ]
   },
   "2026-02-18": {
     "summary": "This newsletter examines how U.S. ballot access rules—which are among the most restrictive in the democratic world—can be weaponized to keep candidates off ballots entirely, representing a form of election subversion that occurs before voting even begins. The key takeaway is that upcoming 2026 secretary of state races are critically important because these officials will control ballot access decisions for 2028, and unlike post-election certification processes, these pre-election vulnerabilities have received little systematic attention or legal preparation.",
-    "topics": []
+    "topics": [
+      "ballot access rules - weaponization",
+      "restrictive US ballot access compared to other democracies",
+      "pre-election subversion through ballot exclusion",
+      "2026 secretary of state races",
+      "secretary of state ballot access authority",
+      "pre-election vulnerabilities - under-studied"
+    ]
   },
   "2026-02-19": {
     "summary": "Local election officials in approximately 10,500 U.S. jurisdictions control critical election mechanics like voter rolls and ballot counting, but their selection methods vary widely—from partisan elections to county commissioner appointments to civil service hiring—creating different vulnerabilities to election subversion. With 30-40% of these officials expected to turn over between 2022-2026, many positions are being filled right now with minimal public attention, meaning the officials who will administer the 2028 election are being chosen during this critical window.",
-    "topics": []
+    "topics": [
+      "10,500 local election jurisdictions",
+      "election official selection methods (partisan election, appointment, civil service)",
+      "30-40% election official turnover (2022-2026)",
+      "low public attention to election official selection",
+      "2028 election administrators being chosen now"
+    ]
   },
   "2026-02-20": {
     "summary": "The U.S. election system operates through roughly 10,500 county-level jurisdictions rather than 50 state systems, a decentralization that both protected democracy in 2020 (when counties like Maricopa resisted state-level pressure) and creates serious vulnerabilities (as small, under-resourced counties can be targeted for obstruction or breaches). In close elections, coordinated disruption in just a handful of strategic counties in swing states could prevent certification, making county-level election official positions and security infrastructure critical priorities for protecting the 2028 election.",
-    "topics": []
+    "topics": [
+      "decentralization as double-edged sword",
+      "Maricopa County resisting state-level pressure (2020)",
+      "small under-resourced counties as targets",
+      "coordinated disruption in strategic swing state counties",
+      "county-level security infrastructure priorities"
+    ]
   },
   "2026-02-21": {
     "summary": "Georgia's requirement that candidates win over 50% of the vote—which triggers a runoff election just four weeks before the Electoral College meets—creates a dangerous timeline vulnerability where bad-faith officials could delay certification and leave the state unable to report results in time. While the runoff system was ironically designed in 1964 to prevent Black candidates from winning but now sometimes helps them, its compressed timeline (shortened from nine to four weeks in 2021) combined with Georgia's status as a critical swing state makes it a potential tool for election subversion in close presidential races.",
-    "topics": []
+    "topics": [
+      "Georgia 50% runoff requirement",
+      "four-week runoff to Electoral College timeline",
+      "Georgia runoff certification delay vulnerability",
+      "1964 origins of Georgia runoff system - racial exclusion",
+      "runoff timeline shortened from nine to four weeks (2021)",
+      "Georgia as critical swing state"
+    ]
   }
 }
