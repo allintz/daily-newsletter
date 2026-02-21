@@ -1,6 +1,6 @@
 open "/Users/alexl/Documents/Claude project 1/daily-newsletter/prompt-template.txt"
 
-You are writing a daily newsletter for someone building deep background knowledge on threats to democracy, specifically:
+You are writing a daily newsletter for someone building deep background knowledge on threats to democracy in the US. This person is particularly worried about the interaction of potential near-future AGI & democracy. Specifically:
 
 {{TOPICS}}
 
@@ -45,35 +45,33 @@ Requirements:
 
 {{RECENT_TOPICS}}
 
-Content variety guidelines (focus on building cumulative knowledge):
+{{COVERED_TOPICS}}
 
-**Historical deep dives** (40% of newsletters):
-- Specific 2020/2022 election subversion attempts with full context (Arizona fake electors scheme, Georgia phone call, Jan 6 planning, Wisconsin fake electors, Pennsylvania legislature pressure, etc.)
-- Historical US cases of election manipulation or subversion attempts (by any party) - what happened, how institutions responded, what we learned
-- International case studies of democratic backsliding (Hungary, Venezuela, Turkey, Weimar Germany, etc.) - mechanisms, timelines, warning signs
+**AVOIDING REPETITION (CRITICAL):**
+- Do NOT use any of the previously covered topics listed above as your main topic
+- If you want to mention a previously covered event as a supporting example, keep it to ONE sentence max and note it was covered in a prior newsletter
+- Choose a genuinely NEW angle, event, case study, or research paper that hasn't been explored yet
+- There are hundreds of relevant topics in democracy research, election history, and comparative politics — dig deeper rather than revisiting familiar ground
 
-**Political science foundations** (30% of newsletters):
-- Key research papers on democratic erosion, norm violations, institutional safeguards
-- Theories and frameworks for understanding democratic backsliding
-- Empirical findings on what factors predict/prevent democratic collapse
-- Research on election administration, voting systems, and integrity mechanisms
+**TODAY'S ASSIGNED CATEGORY: {{CATEGORY}}**
 
-**Comparative analysis** (20% of newsletters):
-- How different democracies structure election administration
-- International examples of election subversion attempts and responses
-- Case studies like parallel vote tabulation (PVT) in Georgia (country) and its effects
-- Lessons from other countries' experiences with authoritarian movements
+You MUST write today's newsletter in this category. Here's what each category means:
 
-**Institutional mechanics** (10% of newsletters):
-- How US election certification actually works (county → state → federal)
-- Legal frameworks and their vulnerabilities
-- Role of secretaries of state, election boards, courts
-- Constitutional provisions and their interpretations
+- **Historical deep dive**: Specific 2020/2022 election subversion attempts with full context (Arizona fake electors scheme, Georgia phone call, Jan 6 planning, Wisconsin fake electors, Pennsylvania legislature pressure, etc.), historical US cases of election manipulation or subversion attempts (by any party), or international case studies of democratic backsliding (Hungary, Venezuela, Turkey, Weimar Germany, South Korea, etc.).
+- **Political science foundations**: Key research papers on democratic erosion, norm violations, institutional safeguards. Theories and frameworks for understanding democratic backsliding. Empirical findings on what factors predict/prevent democratic collapse. Research on election administration, voting systems, and integrity mechanisms.
+- **Comparative analysis**: How different democracies structure election administration. International examples of election subversion attempts and responses. Case studies like parallel vote tabulation (PVT) in Georgia (country) and its effects. Lessons from other countries' experiences with authoritarian movements.
+- **Institutional mechanics**: How US election certification actually works (county → state → federal). Legal frameworks and their vulnerabilities. Role of secretaries of state, election boards, courts. Constitutional provisions and their interpretations.
+- **Current threats and election meddling**: Deep dives into active efforts to undermine election integrity — voter roll purges, poll worker intimidation campaigns, election board capture attempts, certification obstruction strategies. Summarize and contextualize recent reporting from sources like the Brennan Center, ProPublica, and Democracy Docket on ongoing or planned subversion efforts.
+- **Opposition landscape**: Profiles of organizations working to restrict voting access or challenge election outcomes — groups like EagleAI, True the Vote, Heritage Foundation/Heritage Action, Cleta Mitchell's network, America First Legal, and others. How they're funded, what strategies they use, what legal and political infrastructure they're building, and how effective they've been.
+- **Pro-democracy organization profiles**: Profiles of US organizations working to protect elections and strengthen democratic institutions — their missions, strategies, track records, and funding. To the extent possible, evaluate their effectiveness, what gaps they fill, and where the field is under-resourced.
+- **AI and democratic integrity**: New developments in AI-enabled disinformation, deepfakes targeting candidates or election officials, AI-generated voter suppression content, or other uses of AI that could subvert elections. Also cover defensive uses of AI in election protection, content moderation, or civic engagement.
+- **Executive power and legal landscape**: Explain the context, stakes, and implications of a recent major legal case or ruling pertaining to US executive power, separation of powers, or federal authority — covering the legal arguments on both sides, relevant precedent, and what the outcome means for democratic governance.
 
 Choose a topic that:
-1. Hasn't been covered recently (see list above)
-2. Builds foundational understanding rather than covering breaking news
-3. Provides timeless knowledge the reader can build on
-4. Includes specific, well-documented examples
+1. Fits the assigned category above
+2. Hasn't been covered recently (see list above)
+3. Builds foundational understanding
+4. Provides knowledge the reader can build on
+5. Includes specific, well-documented examples
 
 Write the full newsletter now:

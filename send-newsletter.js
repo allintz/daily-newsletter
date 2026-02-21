@@ -11,19 +11,38 @@ const config = JSON.parse(fs.readFileSync(path.join(__dirname, 'config.json'), '
 // Check if this is a test run
 const isTest = process.argv.includes('--test');
 
-function getRecentTopics() {
+function getRecentSummaries() {
   const summariesPath = path.join(__dirname, 'newsletter-summaries.json');
 
   if (!fs.existsSync(summariesPath)) {
-    return [];
+    return { recentSummaries: [], allTopics: [] };
   }
 
   const summaries = JSON.parse(fs.readFileSync(summariesPath, 'utf8'));
+  const allDates = Object.keys(summaries).sort().reverse();
 
-  // Get last 7 summaries
-  const dates = Object.keys(summaries).sort().reverse().slice(0, 7);
+  // Get last 7 summaries for narrative context
+  const recentDates = allDates.slice(0, 7);
+  const recentSummaries = recentDates.map(date => {
+    const entry = summaries[date];
+    // Handle both old format (string) and new format (object)
+    const summaryText = typeof entry === 'string' ? entry : entry.summary;
+    return `- ${date}: ${summaryText}`;
+  });
 
-  return dates.map(date => `- ${date}: ${summaries[date]}`);
+  // Collect ALL topics from every newsletter for deduplication
+  const allTopicsSet = new Set();
+  for (const date of allDates) {
+    const entry = summaries[date];
+    if (typeof entry === 'object' && Array.isArray(entry.topics)) {
+      entry.topics.forEach(t => allTopicsSet.add(t));
+    }
+  }
+
+  return {
+    recentSummaries,
+    allTopics: Array.from(allTopicsSet).sort()
+  };
 }
 
 async function generateSummary(content, anthropic) {
@@ -49,7 +68,44 @@ Provide only the 2-sentence summary, nothing else:`;
   return message.content[0].text.trim();
 }
 
-function saveSummary(date, summary) {
+async function generateTopics(content, anthropic) {
+  // Extract specific topics, events, people, cases, and papers mentioned
+  const topicsPrompt = `Read this newsletter and extract a list of ALL specific topics, events, historical incidents, people, court cases, academic papers, organizations, and concepts discussed. Be thorough and specific - include both the main topic and any supporting examples or references mentioned.
+
+Return ONLY a JSON array of short strings, one per topic. Example format:
+["Brooks Brothers riot (2000)", "Moore v. Harper (2023)", "independent state legislature theory", "Steven Levitsky"]
+
+Newsletter:
+${content}
+
+JSON array:`;
+
+  const message = await anthropic.messages.create({
+    model: 'claude-sonnet-4-5-20250929',
+    max_tokens: 500,
+    messages: [
+      {
+        role: 'user',
+        content: topicsPrompt
+      }
+    ]
+  });
+
+  const text = message.content[0].text.trim();
+  try {
+    return JSON.parse(text);
+  } catch (e) {
+    // Try to extract JSON array from response if there's extra text
+    const match = text.match(/\[[\s\S]*\]/);
+    if (match) {
+      return JSON.parse(match[0]);
+    }
+    console.warn('Could not parse topics response, falling back to empty array');
+    return [];
+  }
+}
+
+function saveSummary(date, summary, topics) {
   const summariesPath = path.join(__dirname, 'newsletter-summaries.json');
 
   let summaries = {};
@@ -57,7 +113,10 @@ function saveSummary(date, summary) {
     summaries = JSON.parse(fs.readFileSync(summariesPath, 'utf8'));
   }
 
-  summaries[date] = summary;
+  summaries[date] = {
+    summary: summary,
+    topics: topics || []
+  };
 
   fs.writeFileSync(summariesPath, JSON.stringify(summaries, null, 2));
 }
@@ -95,13 +154,34 @@ Requirements:
 
 {{RECENT_TOPICS}}
 
+{{COVERED_TOPICS}}
+
 Write the full newsletter now:`;
   }
 
-  // Build recent topics text
-  const recentTopics = getRecentTopics();
-  const recentTopicsText = recentTopics.length > 0
-    ? `Recent topics you've already covered (DO NOT repeat these):\n${recentTopics.join('\n')}`
+  // Randomly select today's category (equal weight)
+  const categories = [
+    'Historical deep dive',
+    'Political science foundations',
+    'Comparative analysis',
+    'Institutional mechanics',
+    'Current threats and election meddling',
+    'Opposition landscape',
+    'Pro-democracy organization profiles',
+    'AI and democratic integrity',
+    'Executive power and legal landscape'
+  ];
+  const roll = Math.floor(Math.random() * categories.length);
+  const category = categories[roll];
+  console.log(`Category roll: ${roll + 1}/${categories.length} → ${category}`);
+
+  // Build recent summaries and covered topics
+  const { recentSummaries, allTopics } = getRecentSummaries();
+  const recentTopicsText = recentSummaries.length > 0
+    ? `Recent newsletter summaries (for context on what you've covered lately):\n${recentSummaries.join('\n')}`
+    : '';
+  const coveredTopicsText = allTopics.length > 0
+    ? `ALL specific topics, events, cases, and examples covered in previous newsletters (DO NOT repeat any of these as a main topic):\n${allTopics.map(t => `- ${t}`).join('\n')}`
     : '';
 
   // Replace template variables
@@ -110,7 +190,9 @@ Write the full newsletter now:`;
     .replace('{{STYLE}}', config.newsletter_style)
     .replace('{{READ_TIME}}', config.target_read_time)
     .replace('{{DATE}}', new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }))
-    .replace('{{RECENT_TOPICS}}', recentTopicsText);
+    .replace('{{RECENT_TOPICS}}', recentTopicsText)
+    .replace('{{COVERED_TOPICS}}', coveredTopicsText)
+    .replace('{{CATEGORY}}', category);
 
   const message = await anthropic.messages.create({
     model: 'claude-sonnet-4-5-20250929',
@@ -303,6 +385,13 @@ function updateIndexPage(newslettersDir) {
     .sort()
     .reverse(); // Most recent first
 
+  // Load summaries
+  const summariesPath = path.join(__dirname, 'newsletter-summaries.json');
+  let summaries = {};
+  if (fs.existsSync(summariesPath)) {
+    summaries = JSON.parse(fs.readFileSync(summariesPath, 'utf8'));
+  }
+
   const indexHTML = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -313,7 +402,7 @@ function updateIndexPage(newslettersDir) {
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
-            max-width: 700px;
+            max-width: 800px;
             margin: 40px auto;
             padding: 0 20px;
             color: #333;
@@ -329,33 +418,58 @@ function updateIndexPage(newslettersDir) {
             color: #2c5282;
             border-bottom: 2px solid #2c5282;
             padding-bottom: 20px;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #718096;
             margin-bottom: 30px;
+            font-size: 1.1em;
         }
         .newsletter-list {
             list-style: none;
             padding: 0;
         }
         .newsletter-list li {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
-        .newsletter-list a {
-            color: #2c5282;
-            text-decoration: none;
-            font-size: 1.1em;
+        .newsletter-item {
             display: block;
-            padding: 15px;
+            padding: 20px;
             background: #f7fafc;
             border-radius: 6px;
-            transition: background 0.2s;
+            border-left: 4px solid #2c5282;
+            transition: all 0.2s;
+            text-decoration: none;
         }
-        .newsletter-list a:hover {
+        .newsletter-item:hover {
             background: #edf2f7;
+            transform: translateX(4px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .newsletter-date {
+            color: #2c5282;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+        .newsletter-summary {
+            color: #4a5568;
+            line-height: 1.5;
+            margin: 0;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            color: #718096;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Democracy Watch Newsletter Archive</h1>
+        <div class="subtitle">Daily insights on threats to democracy and election integrity</div>
         <ul class="newsletter-list">
 ${files.map(file => {
     const date = file.replace('.html', '');
@@ -365,9 +479,20 @@ ${files.map(file => {
         month: 'long',
         day: 'numeric'
     });
-    return `            <li><a href="${file}">${formattedDate}</a></li>`;
+    const entry = summaries[date] || '';
+    // Handle both old format (string) and new format (object)
+    const summary = typeof entry === 'string' ? entry : (entry.summary || '');
+    return `            <li>
+                <a href="${file}" class="newsletter-item">
+                    <div class="newsletter-date">${formattedDate}</div>
+                    ${summary ? `<p class="newsletter-summary">${summary}</p>` : ''}
+                </a>
+            </li>`;
 }).join('\n')}
         </ul>
+        <div class="footer">
+            ${files.length} newsletter${files.length !== 1 ? 's' : ''} published
+        </div>
     </div>
 </body>
 </html>`;
@@ -458,14 +583,18 @@ async function main() {
     // Save newsletter
     const { htmlPath, date: dateStr } = saveNewsletter(content, htmlContent);
 
-    // Generate and save 2-sentence summary
-    console.log('Generating newsletter summary...');
+    // Generate and save summary + topic list
+    console.log('Generating newsletter summary and topics...');
     const anthropic = new Anthropic({
       apiKey: config.anthropic_api_key,
     });
-    const summary = await generateSummary(content, anthropic);
-    saveSummary(dateStr, summary);
+    const [summary, topics] = await Promise.all([
+      generateSummary(content, anthropic),
+      generateTopics(content, anthropic)
+    ]);
+    saveSummary(dateStr, summary, topics);
     console.log(`Summary saved: ${summary}`);
+    console.log(`Topics extracted: ${topics.join(', ')}`);
 
     // Generate title and notification
     const title = generateTitle(content);
