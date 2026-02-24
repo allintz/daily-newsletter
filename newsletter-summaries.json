@@ -523,5 +523,35 @@
   "2026-02-23": {
     "summary": "In Arizona after the 2020 election, eleven Republican officials including the state GOP chair created and sent fraudulent electoral certificates to Washington declaring Trump the winner, despite knowing Biden had won the state by over 10,000 votes. The scheme nearly succeeded because the system had no robust verification process for electoral certificates, and it only failed because Vice President Pence refused to count the fake votes—a reliance on individual conscience rather than structural safeguards that leaves the system vulnerable in future elections.",
     "topics": []
+  },
+  "2026-02-24": {
+    "summary": "County canvassing boards—small groups of 2-4 local officials who certify election results before they reach the state level—represent a vulnerable chokepoint in American democracy, with the power to block certification and prevent votes from being counted in state totals. Since 2020, this previously overlooked process has become weaponized in some jurisdictions, and many swing states still lack clear legal mechanisms to compel certification when boards refuse or deadlock, creating risks for the 2028 election as these positions are being filled now with minimal public oversight.",
+    "topics": [
+      "county canvassing boards",
+      "county boards of canvass",
+      "MIT Election Data and Science Lab",
+      "Michigan county canvassing boards composition",
+      "Arizona Revised Statutes Title 16",
+      "Pennsylvania Election Code",
+      "Arizona county board of supervisors",
+      "Wayne County, Michigan certification refusal (November 2020)",
+      "Detroit Free Press reporting on Wayne County (2020)",
+      "Bridge Michigan reporting on Wayne County certification rescission",
+      "Trump phone call to Wayne County canvassers (2020)",
+      "Brookings Institution 2022 analysis on election deniers",
+      "14 states with potential county canvassing board deadlocks",
+      "Philadelphia County vote totals (2020)",
+      "Georgia State Election Board certification authority",
+      "Georgia election law on county certification",
+      "Brennan Center legal analysis on Arizona certification procedures",
+      "Edward Foley (Ohio State University political scientist)",
+      "erosion of certification norms after 2020",
+      "Nevada Assembly Bill 321",
+      "Michigan Election Law amendments (2023)",
+      "2026-2028 election certification vulnerabilities",
+      "ministerial duty concept in election certification",
+      "All Voting is Local organization",
+      "County Canvassing Board Transparency Project (proposed)"
+    ]
   }
 }
