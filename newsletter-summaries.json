@@ -553,5 +553,35 @@
       "All Voting is Local organization",
       "County Canvassing Board Transparency Project (proposed)"
     ]
+  },
+  "2026-02-25": {
+    "summary": "This newsletter explains \"the liar's dividend\"—the phenomenon where the mere existence of AI deepfake technology allows bad actors to dismiss authentic evidence as fake, even when it's real, creating widespread uncertainty about what's true. The key danger isn't AI-generated fakes themselves, but rather how AI provides a ready-made excuse for politicians and election officials to dispute legitimate evidence during contested elections, requiring authentication infrastructure and legal frameworks rather than just better detection technology.",
+    "topics": [
+      "liar's dividend",
+      "Yale Law School deepfakes paper (2018)",
+      "Bobby Chesney",
+      "Danielle Citron",
+      "Ali Bongo Gabon deepfake claim (2018)",
+      "Gabon attempted coup (2018)",
+      "The Guardian",
+      "Malaysia 2018 election sex video",
+      "Straits Times",
+      "Ron DeSantis awkward voter exchange video (July 2023)",
+      "Politico",
+      "Trump-Raffensperger call (find 11,780 votes)",
+      "Brad Raffensperger",
+      "fake electors fraudulent certificates",
+      "Thomas Rid",
+      "Foreign Affairs article on deepfakes",
+      "epistemological crisis",
+      "UC Berkeley deepfake detection research (2024)",
+      "Forbes",
+      "2028 presidential election",
+      "2020 election certification attempts",
+      "Stanford Internet Observatory",
+      "Coalition for Content Provenance and Authenticity (C2PA)",
+      "MIT deepfake detection training research (2020)",
+      "Science journal"
+    ]
   }
 }
