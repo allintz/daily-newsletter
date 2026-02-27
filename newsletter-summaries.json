@@ -637,5 +637,48 @@
       "competing slates of electors",
       "judicial enforcement crisis"
     ]
+  },
+  "2026-02-27": {
+    "summary": "This newsletter explains how exit polls—surveys of voters immediately after casting ballots—serve as a critical tool for detecting election fraud by revealing significant discrepancies between what voters report and official counts, as demonstrated in Ukraine's 2004 election where a 26-point gap exposed systematic fraud. The US currently doesn't use exit polls for fraud detection despite its election vulnerabilities, and the author argues that implementing robust, precinct-level exit polling in swing states for 2028 would provide independent verification of election results outside the official system, costing an estimated $5-10 million.",
+    "topics": [
+      "exit polls as fraud detection mechanism",
+      "election fraud detection",
+      "election subversion",
+      "Walter Mebane (University of Michigan)",
+      "Ukraine 2004 presidential election",
+      "Viktor Yanukovych",
+      "Viktor Yushchenko",
+      "Orange Revolution (Ukraine 2004)",
+      "Organization for Security and Cooperation in Europe (OSCE)",
+      "Edison Research",
+      "National Election Pool",
+      "US decentralized election system (10,500+ jurisdictions)",
+      "Ohio 2004 election exit poll discrepancies",
+      "2016 primary exit poll discrepancies",
+      "Ron Baiman",
+      "Kathy Dopp",
+      "Statistical Science journal paper on 2004 election",
+      "certification delays",
+      "voter roll purges",
+      "intimidation of election workers",
+      "fake elector schemes",
+      "Coffee County, Georgia voting system breach",
+      "paper ballots",
+      "risk-limiting audits",
+      "Brennan Center",
+      "voting machine security",
+      "precinct-level exit polling",
+      "Harvard Humanitarian Initiative",
+      "Election Day Observation Toolkit",
+      "Pew Research 2016 exit poll study",
+      "Trump voter participation bias in exit polls",
+      "non-response bias in polling",
+      "parallel vote tabulations",
+      "citizen observer networks",
+      "Brad Raffensperger",
+      "Mike Pence",
+      "Democracy Verification Project (proposed)",
+      "Verified Voting organization"
+    ]
   }
 }
