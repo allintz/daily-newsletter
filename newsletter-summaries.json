@@ -800,5 +800,41 @@
       "secure certification platforms",
       "2028 election preparation timeline"
     ]
+  },
+  "2026-03-03": {
+    "summary": "This newsletter explains that while election certification is legally considered a \"ministerial duty\" that officials must perform without discretion, this protection is surprisingly weak in practice because enforcing it requires court orders that take days or weeks to obtain, and compliance isn't guaranteed even then. The key takeaway is that for the 2028 election, states need stronger automatic enforcement mechanisms like self-executing certification and immediate removal authority, because the current system's reliance on litigation and voluntary compliance creates dangerous vulnerabilities when officials refuse to certify results.",
+    "topics": [
+      "ministerial duty (legal concept)",
+      "election certification",
+      "2020 election disputes",
+      "2028 election (future)",
+      "Stanford-MIT Healthy Elections Project",
+      "Georgia Code § 21-2-493",
+      "Cochise County, Arizona certification refusal (2022)",
+      "NPR reporting on Cochise County",
+      "Arizona Attorney General certification lawsuit",
+      "Otero County, New Mexico certification refusal (2022)",
+      "Dominion voting machines",
+      "Brennan Center analysis of certification laws",
+      "Wayne County, Michigan Board of Canvassers (November 2020)",
+      "Monica Palmer",
+      "William Hartmann",
+      "Detroit vote certification dispute (2020)",
+      "Michigan certification law",
+      "Nevada AB 321",
+      "Electoral Count Reform Act",
+      "safe harbor provision",
+      "Electoral College deadline (35 days)",
+      "Brennan Center (organization)",
+      "Protect Democracy (organization)",
+      "canvassing process",
+      "ministerial duty enforcement",
+      "county board of elections certification deadlines",
+      "Democracy Docket case on Arizona certification",
+      "poll book discrepancies",
+      "certification rescission attempt",
+      "self-executing certification",
+      "emergency judicial procedures for election disputes"
+    ]
   }
 }
