@@ -836,5 +836,34 @@
       "self-executing certification",
       "emergency judicial procedures for election disputes"
     ]
+  },
+  "2026-03-04": {
+    "summary": "The newsletter examines Bolivia's controversial 2019 presidential election, where a suspicious 24-hour blackout in vote counting preceded a dramatic shift that gave incumbent Evo Morales just enough votes to avoid a runoff, leading to OAS findings of manipulation (though later disputed by some researchers) and ultimately new elections. The key takeaway is that real-time transparency in vote counting and independent statistical monitoring during the critical 24-48 hour counting window are essential for election integrity, representing a significant gap in current US election infrastructure ahead of 2028.",
+    "topics": [
+      "Bolivia 2019 presidential election",
+      "Evo Morales",
+      "Carlos Mesa",
+      "10 percentage point runoff requirement (Bolivia)",
+      "24-hour vote counting blackout (Bolivia 2019)",
+      "Organization of American States (OAS)",
+      "OAS preliminary report on Bolivia election",
+      "OAS audit report on Bolivia election",
+      "Center for Economic and Policy Research (CEPR)",
+      "MIT researchers disputing OAS findings",
+      "Luis Arce",
+      "Bolivia October 2020 election",
+      "Atlantic Council analysis of Bolivia election",
+      "time-series analysis (election forensics)",
+      "geographic regression analysis",
+      "digital forensics",
+      "Benford's Law analysis",
+      "OSCE (Organization for Security and Cooperation in Europe)",
+      "OSCE election observation missions",
+      "Verified Voting",
+      "MIT Election Data and Science Lab",
+      "Electoral College 35-day window",
+      "real-time statistical election monitoring",
+      "precinct-level vote monitoring"
+    ]
   }
 }
