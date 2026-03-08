@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const Anthropic = require('@anthropic-ai/sdk');
-const fetch = require('node-fetch');
+const OpenAI = require('openai');
 const fs = require('fs');
 const path = require('path');
 
@@ -43,44 +43,71 @@ Provide the audio-optimized version (under 9,000 characters):`;
   return message.content[0].text;
 }
 
+// Split text into chunks that fit within OpenAI's 4096 character TTS limit.
+// Splits on paragraph boundaries first, then sentence boundaries if needed.
+function chunkText(text, maxChars = 4000) {
+  if (text.length <= maxChars) return [text];
+
+  const chunks = [];
+  const paragraphs = text.split(/\n\n+/);
+  let current = '';
+
+  for (const para of paragraphs) {
+    if (current.length + para.length + 2 <= maxChars) {
+      current += (current ? '\n\n' : '') + para;
+    } else if (para.length > maxChars) {
+      // Paragraph itself is too long — split on sentences
+      if (current) { chunks.push(current); current = ''; }
+      const sentences = para.match(/[^.!?]+[.!?]+\s*/g) || [para];
+      for (const sentence of sentences) {
+        if (current.length + sentence.length <= maxChars) {
+          current += sentence;
+        } else {
+          if (current) chunks.push(current);
+          current = sentence;
+        }
+      }
+    } else {
+      chunks.push(current);
+      current = para;
+    }
+  }
+  if (current) chunks.push(current);
+  return chunks;
+}
+
 async function generateAudio(text, outputPath) {
-  if (!config.elevenlabs_api_key || config.elevenlabs_api_key.includes('YOUR-API-KEY')) {
-    console.log('\n⚠️  ElevenLabs not configured. Skipping audio generation.');
+  if (!config.openai_api_key || config.openai_api_key.includes('YOUR-API-KEY')) {
+    console.log('\n⚠️  OpenAI not configured. Skipping audio generation.');
     console.log('Audio would be generated from:');
     console.log(text.substring(0, 200) + '...\n');
     return null;
   }
 
-  console.log('Generating audio with ElevenLabs...');
+  console.log('Generating audio with OpenAI TTS...');
 
-  // Using "Adam" voice - professional male voice
-  // You can change this to any voice ID from ElevenLabs
-  const voiceId = config.elevenlabs_voice_id || 'pNInz6obpgDQGcFmaJgB'; // Adam
+  const openai = new OpenAI({ apiKey: config.openai_api_key });
+  const voice = config.openai_voice || 'onyx'; // deep male voice
 
-  const response = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`, {
-    method: 'POST',
-    headers: {
-      'Accept': 'audio/mpeg',
-      'Content-Type': 'application/json',
-      'xi-api-key': config.elevenlabs_api_key
-    },
-    body: JSON.stringify({
-      text: text,
-      model_id: 'eleven_turbo_v2_5',
-      voice_settings: {
-        stability: 0.5,
-        similarity_boost: 0.75
-      }
-    })
-  });
+  const chunks = chunkText(text);
+  console.log(`Text split into ${chunks.length} chunk(s) for TTS`);
 
-  if (!response.ok) {
-    const error = await response.text();
-    throw new Error(`ElevenLabs API error: ${response.status} ${error}`);
+  const audioBuffers = [];
+  for (let i = 0; i < chunks.length; i++) {
+    console.log(`  Generating chunk ${i + 1}/${chunks.length} (${chunks[i].length} chars)...`);
+    const response = await openai.audio.speech.create({
+      model: 'tts-1',
+      voice: voice,
+      input: chunks[i],
+      response_format: 'mp3',
+    });
+
+    const buffer = Buffer.from(await response.arrayBuffer());
+    audioBuffers.push(buffer);
   }
 
-  const buffer = await response.buffer();
-  fs.writeFileSync(outputPath, buffer);
+  const finalBuffer = Buffer.concat(audioBuffers);
+  fs.writeFileSync(outputPath, finalBuffer);
 
   console.log(`✅ Audio generated: ${outputPath}`);
   return outputPath;

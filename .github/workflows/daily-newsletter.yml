@@ -58,8 +58,8 @@ jobs:
           "podcast": {
             "base_url": "https://allintz.github.io/democracy-newsletter/podcast"
           },
-          "elevenlabs_api_key": "${{ secrets.ELEVENLABS_API_KEY }}",
-          "elevenlabs_voice_id": "pNInz6obpgDQGcFmaJgB"
+          "openai_api_key": "${{ secrets.OPENAI_API_KEY }}",
+          "openai_voice": "onyx"
         }
         EOF
 
