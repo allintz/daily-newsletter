@@ -57,7 +57,7 @@ async function generateAudio(text, outputPath) {
   try {
     execSync(
       `python3 "${scriptPath}" "${tmpTextPath}" "${outputPath}" "${voice}" "${speed}"`,
-      { stdio: 'inherit', timeout: 300000 }
+      { stdio: 'inherit', timeout: 600000 }
     );
     console.log(`✅ Audio generated: ${outputPath}`);
     return outputPath;
