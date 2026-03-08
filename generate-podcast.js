@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const Anthropic = require('@anthropic-ai/sdk');
-const OpenAI = require('openai');
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
@@ -43,74 +43,30 @@ Provide the audio-optimized version (under 9,000 characters):`;
   return message.content[0].text;
 }
 
-// Split text into chunks that fit within OpenAI's 4096 character TTS limit.
-// Splits on paragraph boundaries first, then sentence boundaries if needed.
-function chunkText(text, maxChars = 4000) {
-  if (text.length <= maxChars) return [text];
-
-  const chunks = [];
-  const paragraphs = text.split(/\n\n+/);
-  let current = '';
-
-  for (const para of paragraphs) {
-    if (current.length + para.length + 2 <= maxChars) {
-      current += (current ? '\n\n' : '') + para;
-    } else if (para.length > maxChars) {
-      // Paragraph itself is too long — split on sentences
-      if (current) { chunks.push(current); current = ''; }
-      const sentences = para.match(/[^.!?]+[.!?]+\s*/g) || [para];
-      for (const sentence of sentences) {
-        if (current.length + sentence.length <= maxChars) {
-          current += sentence;
-        } else {
-          if (current) chunks.push(current);
-          current = sentence;
-        }
-      }
-    } else {
-      chunks.push(current);
-      current = para;
-    }
-  }
-  if (current) chunks.push(current);
-  return chunks;
-}
-
 async function generateAudio(text, outputPath) {
-  if (!config.openai_api_key || config.openai_api_key.includes('YOUR-API-KEY')) {
-    console.log('\n⚠️  OpenAI not configured. Skipping audio generation.');
-    console.log('Audio would be generated from:');
-    console.log(text.substring(0, 200) + '...\n');
-    return null;
+  console.log('Generating audio with Kokoro TTS...');
+
+  // Write the audio-optimized text to a temp file for the Python script
+  const tmpTextPath = path.join(__dirname, '.tmp-audio-text.txt');
+  fs.writeFileSync(tmpTextPath, text);
+
+  const voice = config.kokoro_voice || 'am_adam';
+  const speed = config.kokoro_speed || '1.0';
+  const scriptPath = path.join(__dirname, 'tts_kokoro.py');
+
+  try {
+    execSync(
+      `python3 "${scriptPath}" "${tmpTextPath}" "${outputPath}" "${voice}" "${speed}"`,
+      { stdio: 'inherit', timeout: 300000 }
+    );
+    console.log(`✅ Audio generated: ${outputPath}`);
+    return outputPath;
+  } catch (error) {
+    console.error('Kokoro TTS failed:', error.message);
+    throw error;
+  } finally {
+    if (fs.existsSync(tmpTextPath)) fs.unlinkSync(tmpTextPath);
   }
-
-  console.log('Generating audio with OpenAI TTS...');
-
-  const openai = new OpenAI({ apiKey: config.openai_api_key });
-  const voice = config.openai_voice || 'onyx'; // deep male voice
-
-  const chunks = chunkText(text);
-  console.log(`Text split into ${chunks.length} chunk(s) for TTS`);
-
-  const audioBuffers = [];
-  for (let i = 0; i < chunks.length; i++) {
-    console.log(`  Generating chunk ${i + 1}/${chunks.length} (${chunks[i].length} chars)...`);
-    const response = await openai.audio.speech.create({
-      model: 'tts-1',
-      voice: voice,
-      input: chunks[i],
-      response_format: 'mp3',
-    });
-
-    const buffer = Buffer.from(await response.arrayBuffer());
-    audioBuffers.push(buffer);
-  }
-
-  const finalBuffer = Buffer.concat(audioBuffers);
-  fs.writeFileSync(outputPath, finalBuffer);
-
-  console.log(`✅ Audio generated: ${outputPath}`);
-  return outputPath;
 }
 
 function getAudioDuration(filePath) {

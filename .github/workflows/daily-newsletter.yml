@@ -58,13 +58,28 @@ jobs:
           "podcast": {
             "base_url": "https://allintz.github.io/democracy-newsletter/podcast"
           },
-          "openai_api_key": "${{ secrets.OPENAI_API_KEY }}",
-          "openai_voice": "onyx"
+          "kokoro_voice": "am_adam",
+          "kokoro_speed": "1.0"
         }
         EOF
 
     - name: Generate and send newsletter
       run: node send-newsletter.js
+
+    - name: Setup Python for Kokoro TTS
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    - name: Install Kokoro TTS dependencies
+      run: |
+        pip install -r requirements.txt
+        sudo apt-get update && sudo apt-get install -y ffmpeg
+
+    - name: Download Kokoro model files
+      run: |
+        curl -L -o kokoro-v1.0.int8.onnx https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.int8.onnx
+        curl -L -o voices-v1.0.bin https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin
 
     - name: Generate podcast episode
       run: node generate-podcast.js
