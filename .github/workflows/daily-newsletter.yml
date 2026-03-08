@@ -58,7 +58,7 @@ jobs:
           "podcast": {
             "base_url": "https://allintz.github.io/democracy-newsletter/podcast"
           },
-          "kokoro_voice": "am_adam",
+          "kokoro_voice": "af_heart",
           "kokoro_speed": "1.0"
         }
         EOF
