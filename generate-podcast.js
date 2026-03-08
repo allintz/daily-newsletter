@@ -50,7 +50,7 @@ async function generateAudio(text, outputPath) {
   const tmpTextPath = path.join(__dirname, '.tmp-audio-text.txt');
   fs.writeFileSync(tmpTextPath, text);
 
-  const voice = config.kokoro_voice || 'am_adam';
+  const voice = config.kokoro_voice || 'af_heart';
   const speed = config.kokoro_speed || '1.1';
   const scriptPath = path.join(__dirname, 'tts_kokoro.py');
 
