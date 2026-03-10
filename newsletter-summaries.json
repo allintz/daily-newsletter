@@ -968,5 +968,46 @@
       "Election certification deadlines",
       "Congressional counting of electoral votes"
     ]
+  },
+  "2026-03-10": {
+    "summary": "AI systems can now conduct thousands of simultaneous voter outreach conversations and are being used to manipulate voter registration at scale by submitting changes with small errors or convincing voters to provide information that invalidates their registration, potentially affecting enough voters in swing states to change election outcomes. Defensive systems need to be deployed by fall 2026 to be ready for the 2028 election, but most election officials don't yet understand the threat and current county systems lack the capacity to detect these individually legitimate-looking but collectively coordinated registration manipulation campaigns.",
+    "topics": [
+      "AI canvassing systems",
+      "MIT Technology Review reporting (August 2024)",
+      "Stanford Internet Observatory research on AI voter registration systems (2025)",
+      "Brennan Center analysis on AI-enabled voter registration manipulation (2025)",
+      "Pennsylvania 2020 election results",
+      "Biden win in Pennsylvania by 80,555 votes (2020)",
+      "University of Michigan Center for Political Studies research on AI election manipulation detection (2025)",
+      "ProPublica reporting on AI voter registration (January 2026)",
+      "Michigan attorney general investigation into AI voter registration services (2026)",
+      "Nevada attorney general investigation into AI voter registration services (2026)",
+      "Election Assistance Commission analysis on AI voter registration challenges (2025)",
+      "Nevada AI registration protections implementation (late 2025)",
+      "Center for Democracy and Technology AI defense pilot program (2025)",
+      "National Association of State Election Directors threat assessment (December 2025)",
+      "Democracy Defense Fund",
+      "voter registration manipulation",
+      "AI voice and text conversation systems",
+      "voter roll manipulation",
+      "provisional ballot processes",
+      "registration deadline exploitation",
+      "AI-enhanced voter registration services",
+      "rate limiting and pattern detection for voter registration",
+      "extended provisional ballot rights",
+      "AI transparency requirements for voter contact",
+      "robocall disclosure rules",
+      "pre-Election Day registration verification campaigns",
+      "defensive AI systems for election administration",
+      "swing state voter registration vulnerabilities",
+      "county election office capacity limitations",
+      "2028 presidential election preparations",
+      "Voter Registration Integrity Network (proposed project)",
+      "2026 state legislative sessions",
+      "voter registration disclosure requirements",
+      "Stanford Internet Observatory election integrity program",
+      "Brennan Center technology policy group",
+      "Center for Democracy and Technology elections team"
+    ]
   }
 }
