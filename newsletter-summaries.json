@@ -1354,5 +1354,46 @@
   "2026-03-19": {
     "summary": "Costa Rica has achieved 98% public trust in election results through a Supreme Electoral Tribunal that has constitutional status equal to other branches of government, cannot be defunded by the legislature, and uses a double-supermajority appointment process that prevents single-party capture. US states could adopt similar protections through constitutional amendments establishing independent election authorities with supermajority appointment requirements and guaranteed funding—reforms that could be pursued via ballot initiatives in swing states before the 2028 election.",
     "topics": []
+  },
+  "2026-03-20": {
+    "summary": "This newsletter examines the largely unmonitored county canvassing boards—small groups of 2-4 officials who have legal power to certify or refuse election results—as a critical vulnerability in U.S. election security. The key takeaway is that despite certification refusals occurring in at least six counties during 2022, there's still no comprehensive tracking system for these officials in swing states, creating an 86% failure rate in identifying risks before crises occur, with appointments for the 2028 election cycle happening right now.",
+    "topics": [
+      "county canvassing boards",
+      "election certification process",
+      "Brennan Center analysis of local election certification",
+      "States United Democracy Center election certification tracker",
+      "Brad Raffensperger",
+      "Al Schmidt",
+      "ProPublica investigation of 2022 New Mexico certification crisis",
+      "Otero County Commission (New Mexico)",
+      "Otero County certification refusal (2022)",
+      "2022 certification refusals (six counties, four states)",
+      "Arizona certification issues (2022)",
+      "Nevada certification issues (2022)",
+      "New Mexico certification issues (2022)",
+      "Pennsylvania certification issues (2022)",
+      "Democracy Docket analysis of certification refusals",
+      "Stanford-MIT Healthy Elections Project research on certifying elections (2022)",
+      "National Association of State Election Directors survey on certification processes",
+      "election denial movement",
+      "2028 presidential election",
+      "swing states (Arizona, Georgia, Michigan, Nevada, Pennsylvania, Wisconsin)",
+      "Democracy Docket analysis of election certification and local officials",
+      "Election Reformers Network analysis of local certification (2026)",
+      "2026-2027 canvassing board turnover",
+      "Verified Voting election administration database",
+      "Protect Democracy election certification guide",
+      "election subversion",
+      "county commission appointments",
+      "partisan party appointments to canvassing boards",
+      "County Canvassing Board Watch program concept",
+      "secretaries of state role in elections",
+      "county election directors",
+      "election security infrastructure",
+      "voting machines",
+      "voter registration databases",
+      "poll worker recruitment",
+      "2026 redistricting cycle"
+    ]
   }
 }
