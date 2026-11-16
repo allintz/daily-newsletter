@@ -100,14 +100,24 @@ async function updateRSSFeed(audioFileName, title, description, date) {
 
   const fileSize = fs.existsSync(audioPath) ? fs.statSync(audioPath).size : 0;
 
-  // Read existing feed or create new one
+  // Read the existing feed so earlier episodes are kept. In CI the working
+  // copy has no podcast/ directory, so fall back to the published feed in the
+  // checked-out newsletters repository.
+  const publishedRssPath = path.join(
+    __dirname, config.newsletter_archive_path || 'newsletters', 'podcast', 'feed.xml'
+  );
+  const existingFeedPath = [rssPath, publishedRssPath].find(p => fs.existsSync(p));
+
   let existingItems = [];
-  if (fs.existsSync(rssPath)) {
-    const existingFeed = fs.readFileSync(rssPath, 'utf8');
+  if (existingFeedPath) {
+    const existingFeed = fs.readFileSync(existingFeedPath, 'utf8');
     // Extract existing items (simple regex - not perfect but works)
     const itemMatches = existingFeed.match(/<item>[\s\S]*?<\/item>/g);
     if (itemMatches) {
-      existingItems = itemMatches;
+      // Drop any earlier entry for this same episode so a re-run replaces it
+      existingItems = itemMatches.filter(
+        item => !item.includes(`>${audioFileName}</guid>`)
+      );
     }
   }
 
