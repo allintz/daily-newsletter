@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const Anthropic = require('@anthropic-ai/sdk');
+const { askClaude } = require('./claude');
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -29,18 +30,9 @@ ${content}
 
 Provide the audio-optimized version (under 5,000 characters):`;
 
-  const message = await anthropic.messages.create({
-    model: 'claude-sonnet-4-5-20250929',
-    max_tokens: 4000,
-    messages: [
-      {
-        role: 'user',
-        content: prompt
-      }
-    ]
-  });
+  const responseText = await askClaude(anthropic, prompt, 16000);
 
-  return message.content[0].text;
+  return responseText;
 }
 
 async function generateAudio(text, outputPath) {
