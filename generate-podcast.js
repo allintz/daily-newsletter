@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
 const Anthropic = require('@anthropic-ai/sdk');
-const fetch = require('node-fetch');
+const { askClaude } = require('./claude');
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
@@ -22,68 +23,42 @@ Take this newsletter and rewrite it to be optimal for listening:
 5. Preserve all the key information and nuance
 6. DO NOT add an introduction like "Welcome to..." or "This is..." - just start with the content
 7. DO NOT add a conclusion or sign-off - just end naturally
-8. IMPORTANT: Keep it under 9,000 characters. Condense if needed while preserving key insights.
+8. IMPORTANT: Keep it under 5,000 characters. Condense if needed while preserving key insights.
 
 Original newsletter:
 ${content}
 
-Provide the audio-optimized version (under 9,000 characters):`;
+Provide the audio-optimized version (under 5,000 characters):`;
 
-  const message = await anthropic.messages.create({
-    model: 'claude-sonnet-4-5-20250929',
-    max_tokens: 4000,
-    messages: [
-      {
-        role: 'user',
-        content: prompt
-      }
-    ]
-  });
+  const responseText = await askClaude(anthropic, prompt, 16000);
 
-  return message.content[0].text;
+  return responseText;
 }
 
 async function generateAudio(text, outputPath) {
-  if (!config.elevenlabs_api_key || config.elevenlabs_api_key.includes('YOUR-API-KEY')) {
-    console.log('\n⚠️  ElevenLabs not configured. Skipping audio generation.');
-    console.log('Audio would be generated from:');
-    console.log(text.substring(0, 200) + '...\n');
-    return null;
+  console.log('Generating audio with Kokoro TTS...');
+
+  // Write the audio-optimized text to a temp file for the Python script
+  const tmpTextPath = path.join(__dirname, '.tmp-audio-text.txt');
+  fs.writeFileSync(tmpTextPath, text);
+
+  const voice = config.kokoro_voice || 'af_heart';
+  const speed = config.kokoro_speed || '1.1';
+  const scriptPath = path.join(__dirname, 'tts_kokoro.py');
+
+  try {
+    execSync(
+      `python3 "${scriptPath}" "${tmpTextPath}" "${outputPath}" "${voice}" "${speed}"`,
+      { stdio: 'inherit', timeout: 900000 }
+    );
+    console.log(`✅ Audio generated: ${outputPath}`);
+    return outputPath;
+  } catch (error) {
+    console.error('Kokoro TTS failed:', error.message);
+    throw error;
+  } finally {
+    if (fs.existsSync(tmpTextPath)) fs.unlinkSync(tmpTextPath);
   }
-
-  console.log('Generating audio with ElevenLabs...');
-
-  // Using "Adam" voice - professional male voice
-  // You can change this to any voice ID from ElevenLabs
-  const voiceId = config.elevenlabs_voice_id || 'pNInz6obpgDQGcFmaJgB'; // Adam
-
-  const response = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`, {
-    method: 'POST',
-    headers: {
-      'Accept': 'audio/mpeg',
-      'Content-Type': 'application/json',
-      'xi-api-key': config.elevenlabs_api_key
-    },
-    body: JSON.stringify({
-      text: text,
-      model_id: 'eleven_turbo_v2_5',
-      voice_settings: {
-        stability: 0.5,
-        similarity_boost: 0.75
-      }
-    })
-  });
-
-  if (!response.ok) {
-    const error = await response.text();
-    throw new Error(`ElevenLabs API error: ${response.status} ${error}`);
-  }
-
-  const buffer = await response.buffer();
-  fs.writeFileSync(outputPath, buffer);
-
-  console.log(`✅ Audio generated: ${outputPath}`);
-  return outputPath;
 }
 
 function getAudioDuration(filePath) {
@@ -117,14 +92,24 @@ async function updateRSSFeed(audioFileName, title, description, date) {
 
   const fileSize = fs.existsSync(audioPath) ? fs.statSync(audioPath).size : 0;
 
-  // Read existing feed or create new one
+  // Read the existing feed so earlier episodes are kept. In CI the working
+  // copy has no podcast/ directory, so fall back to the published feed in the
+  // checked-out newsletters repository.
+  const publishedRssPath = path.join(
+    __dirname, config.newsletter_archive_path || 'newsletters', 'podcast', 'feed.xml'
+  );
+  const existingFeedPath = [rssPath, publishedRssPath].find(p => fs.existsSync(p));
+
   let existingItems = [];
-  if (fs.existsSync(rssPath)) {
-    const existingFeed = fs.readFileSync(rssPath, 'utf8');
+  if (existingFeedPath) {
+    const existingFeed = fs.readFileSync(existingFeedPath, 'utf8');
     // Extract existing items (simple regex - not perfect but works)
     const itemMatches = existingFeed.match(/<item>[\s\S]*?<\/item>/g);
     if (itemMatches) {
-      existingItems = itemMatches;
+      // Drop any earlier entry for this same episode so a re-run replaces it
+      existingItems = itemMatches.filter(
+        item => !item.includes(`>${audioFileName}</guid>`)
+      );
     }
   }
 

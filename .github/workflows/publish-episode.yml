@@ -1,0 +1,37 @@
+name: Publish Podcast Episode
+
+# Runs when an episode folder is pushed. Copies the audio and show notes into
+# the published podcast repo and adds the episode to feed.xml.
+on:
+  push:
+    branches: ['main', 'claude/**']
+    paths: ['episodes/**']
+  workflow_dispatch:
+
+concurrency: publish-episode
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v5
+
+    - name: Checkout newsletters repository
+      uses: actions/checkout@v5
+      with:
+        repository: allintz/democracy-newsletter
+        path: newsletters
+        token: ${{ secrets.GH_PAT }}
+
+    - name: Add episodes to the feed
+      run: python3 podcast-tools/add_to_feed.py episodes newsletters/podcast
+
+    - name: Commit and push to newsletters repository
+      run: |
+        cd newsletters
+        git config user.name "GitHub Actions Bot"
+        git config user.email "actions@github.com"
+        git add podcast
+        git diff --staged --quiet || git commit -m "Podcast episode $(date +%Y-%m-%d)"
+        git push

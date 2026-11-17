@@ -1,0 +1,53 @@
+Is there a tape? Today's question is a blunt one. How likely is it that a video exists showing Donald Trump in sexual activity with a minor?
+
+Two things before we start. First, Trump denies any wrongdoing connected to Jeffrey Epstein, and he has never been charged with a crime related to him. Second, every number you are about to hear is a judgment call based on public reporting. The sources are in the show notes.
+
+Here is the short answer. My estimate is about four tenths of one percent. Roughly one chance in two hundred and fifty. A reasonable range runs from a few hundredths of a percent up to about five percent. No public evidence shows that such a video exists. The number is above zero because of how Epstein operated, and because the two men were friends for about fifteen years.
+
+Now, how do we get there?
+
+We use Bayesian reasoning. That means we start with a rough starting estimate, called a prior. Then we take each piece of evidence and ask one question. Would we be more likely to see this if the tape exists, or if it doesn't? If the evidence fits both worlds equally well, it tells us nothing, no matter how dramatic it sounds.
+
+Let's build the prior. For a tape to exist today, three things all have to be true.
+
+One. Trump had sexual contact with a minor, somewhere a camera could have been running. I put that at about eight percent. On one side, there is the long friendship. There are Epstein's own emails, where he claims Trump knew about the girls, and spent hours at his house with a victim. And there is a lawsuit from twenty sixteen, alleging a rape in nineteen ninety four, which was withdrawn before any court tested it. On the other side, Virginia Giuffre said under oath that she did not believe Trump knew about Epstein's crimes. And prosecutors wrote that no other victim described being directed to have sex with other men.
+
+Two. If it happened, it was recorded. I put that at twenty percent. Victims have described hidden cameras in Epstein's homes. But it might not have happened at one of his properties at all.
+
+Three. If it was recorded, the recording still exists. I put that at fifty percent. Epstein hid evidence for years, and material could have been destroyed.
+
+Multiply those together. Eight percent, times twenty percent, times fifty percent. That gives a starting point of about eight tenths of one percent.
+
+Now the evidence. Five items came from the question itself, and I have added three more.
+
+First. The Biden Justice Department held everything seized from Epstein for four years. It did not release the files, and it did not prosecute Trump. Think about what that means. Trump was the leading figure of the opposing party. If a video of him abusing a child were sitting in an evidence room, four years of silence would be very hard to explain. The ordinary explanation for not releasing the files is simple. The Ghislaine Maxwell case was still on appeal.
+
+There is a second fact that points the same way. A prosecutor's memo from twenty twenty five says the videos and photos seized from Epstein's homes did not show victims being abused, and did not implicate anyone else. And the Associated Press reported that the F B I concluded Epstein was not running a trafficking ring for powerful men.
+
+Together, these nearly rule out the idea that the United States government holds a tape. They say much less about a tape held by somebody else. So I cut the estimate roughly in half. We are now at about three and a half tenths of a percent.
+
+Second. The files themselves. In January, the department released more than three million pages, and more than two thousand videos. Trump's name appears thousands of times. The files do contain allegations against him. Many came through an F B I tip line that takes calls from the public. Some were anonymous. Some were second hand. The Deputy Attorney General said none were credible enough to investigate further. So, two effects. Allegations exist, which pushes the estimate up a little. But no video of Trump appeared, and nothing has leaked from the many people who have seen the unredacted material. That pushes it down a little. These roughly cancel.
+
+Third. Congressman Ted Lieu. You may have seen posts claiming he said there is a video. He did not. In February, he said the files contain highly disturbing allegations that Trump raped and threatened children. His office told fact checkers he meant allegations, not video. The video quote comes from memes and from clips made with artificial intelligence. Since we already counted the allegations, this changes nothing.
+
+Fourth. Iran. I could not find any report of Iran threatening to release Epstein material. What I found was an Iranian embassy posting a mocking video. It shows a flying saucer, towing a banner that reads, release Epstein files. That is trolling. And trolling is just as likely whether a tape exists or not. No change.
+
+Fifth. Ukraine. This one is often described as Ukraine saying Russia has compromising material. It is not an official finding. It is a retired Ukrainian security general, speaking in a television interview. The former British intelligence officer Christopher Steele has said something similar. Neither offered evidence. Both have reasons to say it either way. I give it a very small bump upward.
+
+Now the three I added.
+
+Sixth. How the Trump administration has handled all this. It promised to release the files. Then it reversed course. It missed the legal deadline. The redactions are heavy, and the department's own inspector general is now reviewing the release. That pattern is more likely if there is something seriously damaging to hide. But it is also what you would expect from plain embarrassment about a long friendship with Epstein. This is the strongest item on the upward side. It raises the estimate by about half, to roughly six tenths of a percent.
+
+Seventh. Epstein's private emails. They do suggest Trump knew more than he admits. But look at what Epstein is doing in them. He is discussing with a journalist how to use Trump's denials as leverage. A man holding a tape would not need that. These two readings cancel out.
+
+Eighth, and last. Nothing has surfaced. For more than ten years, Trump has been the most investigated person on earth. Campaign researchers. Foreign intelligence services. A special counsel. Thousands of journalists. A tape in private hands would be worth a fortune, and it would probably have appeared by now. A tape held by a hostile government could stay hidden, so this is not decisive. But it does pull the estimate back down.
+
+So where do we land? About four tenths of one percent.
+
+How much should you trust that number? Not to the decimal point. The result depends mostly on the starting estimate, and that is the least certain part. If you think the first step is twenty percent instead of eight, and you read the administration's behavior as more suspicious, you can get to about five percent. If you are more skeptical at each step, you land near three hundredths of a percent.
+
+What would change my mind? Going up, a named witness or official saying on the record that they have seen such a video. Or the inspector general finding that video evidence was withheld. Going down, complete evidence logs showing there was no camera footage from the years that matter.
+
+One last thing, because it is easy to blur. This was an estimate of whether a video exists. It was not a verdict on whether the allegations are true. Those are different questions, and the second one has much less evidence on either side than the noise around it suggests.
+
+Two of the five items we started with turned out to be distorted versions of real events. That may be the most useful finding here. On this subject, check the original before you update.

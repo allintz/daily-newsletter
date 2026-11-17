@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const Anthropic = require('@anthropic-ai/sdk');
+const { askClaude } = require('./claude');
 const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
@@ -54,18 +55,9 @@ ${content}
 
 Provide only the 2-sentence summary, nothing else:`;
 
-  const message = await anthropic.messages.create({
-    model: 'claude-sonnet-4-5-20250929',
-    max_tokens: 150,
-    messages: [
-      {
-        role: 'user',
-        content: summaryPrompt
-      }
-    ]
-  });
+  const responseText = await askClaude(anthropic, summaryPrompt, 2000);
 
-  return message.content[0].text.trim();
+  return responseText;
 }
 
 async function generateTopics(content, anthropic) {
@@ -80,18 +72,9 @@ ${content}
 
 JSON array:`;
 
-  const message = await anthropic.messages.create({
-    model: 'claude-sonnet-4-5-20250929',
-    max_tokens: 500,
-    messages: [
-      {
-        role: 'user',
-        content: topicsPrompt
-      }
-    ]
-  });
+  const responseText = await askClaude(anthropic, topicsPrompt, 4000);
 
-  const text = message.content[0].text.trim();
+  const text = responseText;
   try {
     return JSON.parse(text);
   } catch (e) {
@@ -194,18 +177,9 @@ Write the full newsletter now:`;
     .replace('{{COVERED_TOPICS}}', coveredTopicsText)
     .replace('{{CATEGORY}}', category);
 
-  const message = await anthropic.messages.create({
-    model: 'claude-sonnet-4-5-20250929',
-    max_tokens: 4000,
-    messages: [
-      {
-        role: 'user',
-        content: prompt
-      }
-    ]
-  });
+  const responseText = await askClaude(anthropic, prompt, 16000);
 
-  return message.content[0].text;
+  return responseText;
 }
 
 function convertMarkdownLinks(text) {
